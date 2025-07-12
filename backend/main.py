@@ -1,2 +1,7 @@
-# Backend for CogniCraft
-# FastAPI app will go here.
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "CogniCraft backend running!"}
